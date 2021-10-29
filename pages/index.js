@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Nav from '../components/Nav.js'
 
 export default function Home() {
   return (
@@ -9,6 +10,9 @@ export default function Home() {
       </Head>
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+
+        <Nav />
+
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
           <a className="text-blue-600" href="https://nextjs.org">

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Nav from '../components/Nav.js'
 
 const Products = () => {
 
@@ -29,6 +30,9 @@ const Products = () => {
 
     return (
         <main className="w-screen">
+
+            <Nav />
+
             <div className="flex flex-col items-center justify-content text-center">
                 <h1 className="text-4xl mb-8">About us</h1>
 
