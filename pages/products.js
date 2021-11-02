@@ -1,8 +1,17 @@
+import { useState } from 'react';
 import Link from 'next/link'
 import Nav from '../components/Nav.js'
 
 const Products = () => {
 
+    const [data, setData] = useState(false)
+
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+        .then((response) => response.json())
+        .then((json) => setData(json));
+    // console.log(typeof (data));
+
+    const { body, id, title, userId } = data
     const products = [
         {
             name: "sdkcbccsc",
@@ -34,7 +43,12 @@ const Products = () => {
             <Nav />
 
             <div className="flex flex-col items-center justify-content text-center">
-                <h1 className="text-4xl mb-8">About us</h1>
+                <h1 className="text-4xl mb-8">Products</h1>
+
+                {id}<br />
+                {title}<br />
+                {body}<br />
+                {userId}<br />
 
                 {products.map((product) => {
                     return (
