@@ -7,8 +7,8 @@ const Products = () => {
     const [data, setData] = useState(false)
     const [postsVisible, setPostsVisible] = useState(false)
 
-    function togglePosts(a, b) {
-        fetchPosts()
+    async function togglePosts() {
+        await fetchPosts()
         setPostsVisible(!postsVisible)
     }
 
@@ -45,7 +45,7 @@ const Products = () => {
 
             <div className="flex flex-col items-center justify-content text-center">
                 <h1 className="text-4xl mb-8">Products</h1>
-                <button onClick={togglePosts} className="border-1 bg-brand px-8 py-4 w-48 text-white rounded shadow-2xl hover:shadow transition-all">{!postsVisible ? `Show posts` : `Hide posts`}</button>
+                <button onClick={togglePosts} className="border-1 bg-brand px-8 py-4 w-48 text-white rounded shadow-2xl hover:shadow transition-all m-24">{!postsVisible ? `Show posts` : `Hide posts`}</button>
 
                 {postsVisible &&
                     <div>

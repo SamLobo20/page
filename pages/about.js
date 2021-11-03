@@ -6,9 +6,9 @@ const About = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     function openForm() {
-        console.log("Function called!")
+        // console.log("Function called!")
         setIsOpen(!isOpen)
-        console.log(isOpen);
+        // console.log(isOpen);
         const x = 1;
     }
 
