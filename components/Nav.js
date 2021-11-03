@@ -2,11 +2,19 @@ import Link from 'next/link'
 
 const Nav = () => {
 
+    const links = [
+        { name: "Home", link: "/" },
+        { name: "Posts", link: "/posts" },
+        { name: "Contact", link: "/contact" },
+    ]
+
     return (
-        <ul>
-            <li><Link href="/"><a>Home</a></Link></li>
-            <li><Link href="/products"><a>Products</a></Link></li>
-            <li><Link href="/about"><a>About</a></Link></li>
+        <ul className="flex space-x-6 my-4 ml-4">
+            {links.map((l) => {
+                return (
+                    <li><Link href={l.link}><a>{l.name}</a></Link></li>
+                )
+            })}
         </ul>
     )
 }
