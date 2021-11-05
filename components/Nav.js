@@ -12,7 +12,7 @@ const Nav = () => {
         <ul className="flex space-x-6 my-4 ml-4">
             {links.map((l) => {
                 return (
-                    <li><Link href={l.link}><a>{l.name}</a></Link></li>
+                    <li key={l.name}><Link href={l.link}><a>{l.name}</a></Link></li>
                 )
             })}
         </ul>
