@@ -35,9 +35,9 @@ const Contact = () => {
 
                     {isOpen && (
                         <form className="flex flex-col space-y-6 shadow px-4 py-4 mt-6">
-                            <input type="text" placeholder="Your Name" className=""></input>
-                            <input type="email" placeholder="Your Email" className=""></input>
-                            <input type="number" placeholder="Your Age" className=""></input>
+                            <input type="text" placeholder="Your Name"></input>
+                            <input type="email" placeholder="Your Email"></input>
+                            <input type="number" placeholder="Your Age"></input>
                         </form>
                     )
                     }
