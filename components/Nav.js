@@ -14,10 +14,10 @@ const Nav = () => {
     ]
 
     return (
-        <ul className="flex space-x-6 my-4 ml-4 mb-12">
+        <ul className="flex justify-between my-4 ml-4 mb-12 w-max space-x-8">
             {links.map((l) => {
                 return (
-                    <li key={l.name} className='w-16'>
+                    <li key={l.name}>
                         <Link href={l.url}>
                             <a className={`${router.pathname === l.url ? 'active-nav' : ''}`}>
                                 {l.name}
