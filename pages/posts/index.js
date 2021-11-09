@@ -1,11 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import Nav from '../../components/Nav.js'
+import { useRouter } from 'next/router'
 
 const Posts = ({ posts }) => {
 
     const [postsVisible, setPostsVisible] = useState(false)
+    const router = useRouter()
+
+    // Check url params for postsVisible=true
+    useEffect(() => {
+        if (router.query.postsVisible) {
+            setPostsVisible(true)
+        }
+    }, [])
 
     return (
         <div>
