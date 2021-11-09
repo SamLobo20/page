@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Nav from '../components/Nav.js'
 import Image from 'next/image'
 import Link from 'next/link'
+import Social from '../components/Social.js'
 
 export default function Home() {
   return (
@@ -12,9 +13,9 @@ export default function Home() {
       </Head>
 
       <Nav />
+      <Social />
 
       <main className="flex flex-col items-center justify-center w-full text-center">
-
         <h1 className="text-4xl">Welcome!</h1>
 
         <div className="mt-16 flex flex-col gap-8">

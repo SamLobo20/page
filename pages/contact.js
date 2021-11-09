@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useState } from 'react';
 import Nav from '../components/Nav.js'
+import Social from '../components/Social.js';
 
 const Contact = () => {
 
@@ -8,7 +9,6 @@ const Contact = () => {
 
     function openForm() {
         setIsOpen(!isOpen)
-        const x = 1;
     }
 
     const x = 18;
@@ -21,9 +21,9 @@ const Contact = () => {
             </Head>
 
             <Nav />
+            <Social />
 
             <main className="w-screen pb-32">
-
                 <div className="flex flex-col items-center justify-content text-center">
                     <h1 className="text-4xl mb-8">Contact us</h1>
                     <div className="shadow p-8 bg-gray-100 rounded-xl">
