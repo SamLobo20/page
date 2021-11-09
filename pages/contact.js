@@ -31,7 +31,7 @@ const Contact = () => {
                         <p className="">Dynamic: {x}</p>
                     </div>
 
-                    <button onClick={openForm} className="border-1 bg-brand px-8 py-4 w-48 text-white rounded shadow-2xl hover:shadow transition-all my-8">Contact us!</button>
+                    <button onClick={openForm}>Contact us!</button>
 
                     {isOpen && (
                         <form className="flex flex-col space-y-6 shadow px-4 py-4 mt-6">
