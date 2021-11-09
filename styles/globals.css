@@ -18,7 +18,7 @@ email: bauer.christof@gmail.com
 @tailwind utilities;
 
 .active-nav {
-  @apply font-extrabold border-b-2;
+  @apply font-bold border-b-2 border-brand;
 }
 
 input {
