@@ -12,7 +12,7 @@ const Post = ({ post }) => {
       <main className="w-full px-8">
         <div className="flex flex-col items-center justify-content">
           <h1 className="text-4xl mb-8">Post</h1>
-          <div className="shadow p-8 mb-6">
+          <div className="shadow p-8 mb-6 bg-gray-50">
             <p className="mb-4"><span className="font-bold">ID: </span>{post.id}</p>
             <p className="mb-4"><span className="font-bold">Title: </span>{post.title}</p>
             <p className="mb-4"><span className="font-bold">Content: </span>{post.body}</p>

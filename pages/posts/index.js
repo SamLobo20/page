@@ -25,19 +25,20 @@ const Posts = ({ posts }) => {
                     </button>
 
                     {postsVisible &&
-
-                        posts.map((post) => {
-                            const { body, id, title, userId } = post
-                            return (
-                                <Link href={`/posts/${id}`} key={id}>
-                                    <a className="shadow p-8 bg-gray-100 rounded mb-6 hover:shadow-none">
-                                        <p className="csc">{id}</p>
-                                        <p className="csc">{title}</p>
-                                        <p className="dcsdc">{body}</p>
-                                    </a>
-                                </Link>
-                            )
-                        })
+                        <div className='flex flex-col'>
+                            {posts.map((post) => {
+                                const { body, id, title, userId } = post
+                                return (
+                                    <Link href={`/posts/${id}`} key={id}>
+                                        <a className="shadow p-8 bg-gray-50 rounded mb-6 hover:shadow-none">
+                                            <p className="csc">{id}</p>
+                                            <p className="csc">{title}</p>
+                                            <p className="dcsdc">{body}</p>
+                                        </a>
+                                    </Link>
+                                )
+                            })}
+                        </div>
                     }
 
                 </div>
