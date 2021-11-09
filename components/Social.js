@@ -5,22 +5,29 @@ const Social = () => {
   return (
     <div className="absolute right-8">
       <ul className="flex flex-col gap-4">
-        <li className=''>
+        <li>
           <Link href="https://web.facebook.com/SamLobo72">
-            <a className="" target="_blank">
+            <a target="_blank" rel="noopener noreferrer nofollow">
               <Image src="/social/facebook.png" width={40} height={40} alt="Facebook"></Image>
             </a>
           </Link>
         </li>
-        <li className=''>
+        <li>
           <Link href="https://instagram.com/SamLobo72">
-            <a className="" target="_blank">
+            <a target="_blank" rel="noopener noreferrer nofollow">
               <Image src="/social/instagram.png" width={40} height={40} alt="Instagram"></Image>
             </a>
           </Link>
         </li>
-      </ul>
-    </div>
+        <li>
+          <Link href="https://github.com/SamLobo20">
+            <a target="_blank" rel="noopener noreferrer nofollow">
+              <Image src="/social/github.png" width={40} height={40} alt="Github"></Image>
+            </a>
+          </Link>
+        </li >
+      </ul >
+    </div >
   )
 }
 
