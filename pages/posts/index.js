@@ -20,7 +20,7 @@ const Posts = ({ posts }) => {
 
                 <div className="flex flex-col items-center justify-content text-center">
                     <h1 className="text-4xl">Posts</h1>
-                    <button onClick={() => setPostsVisible(!postsVisible)}>
+                    <button onClick={() => setPostsVisible(!postsVisible)} className='button'>
                         {!postsVisible ? `Show posts` : `Hide posts`}
                     </button>
 

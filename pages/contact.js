@@ -31,7 +31,7 @@ const Contact = () => {
                         <p className="">Dynamic: {x}</p>
                     </div>
 
-                    <button onClick={openForm}>Contact us!</button>
+                    <button onClick={openForm} className='button'>Contact us!</button>
 
                     {isOpen && (
                         <form className="flex flex-col space-y-6 shadow px-4 py-4 mt-6">
