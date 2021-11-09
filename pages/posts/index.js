@@ -18,7 +18,7 @@ const Posts = ({ posts }) => {
 
             <main className="w-screen px-8">
 
-                <div className="flex flex-col items-center justify-content text-center">
+                <div className="flex flex-col items-center justify-content">
                     <h1 className="text-4xl">Posts</h1>
                     <button onClick={() => setPostsVisible(!postsVisible)} className='button'>
                         {!postsVisible ? `Show posts` : `Hide posts`}
@@ -31,9 +31,10 @@ const Posts = ({ posts }) => {
                                 return (
                                     <Link href={`/posts/${id}`} key={id}>
                                         <a className="shadow p-8 bg-gray-50 rounded mb-6 hover:shadow-none">
-                                            <p className="csc">{id}</p>
-                                            <p className="csc">{title}</p>
-                                            <p className="dcsdc">{body}</p>
+                                            <p className="mb-4"><span className="font-bold">ID: </span>{id}</p>
+                                            <p className="mb-4"><span className="font-bold">Title: </span>{title}</p>
+                                            <p className="mb-4"><span className="font-bold">Content: </span>{body}</p>
+                                            <p className="mb-4"><span className="font-bold">User: </span>{userId}</p>
                                         </a>
                                     </Link>
                                 )
