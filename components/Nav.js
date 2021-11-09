@@ -9,6 +9,7 @@ const Nav = () => {
         { name: "Posts", url: "/posts" },
         { name: "Contact", url: "/contact" },
         { name: "Video", url: "/video" },
+        { name: "Wiki", url: "/wiki" },
     ]
 
     return (
