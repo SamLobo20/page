@@ -6,8 +6,8 @@ const Nav = () => {
         { name: "Home", link: "/" },
         { name: "Posts", link: "/posts" },
         { name: "Contact", link: "/contact" },
+        { name: "Video", link: "/video" },
     ]
-
     return (
         <ul className="flex space-x-6 my-4 ml-4">
             {links.map((l) => {
