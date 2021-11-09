@@ -2,18 +2,10 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import Nav from '../../components/Nav.js'
-import { fetchPosts } from '../../lib/fetchPosts.js'
 
-const Posts = () => {
+const Posts = ({ posts }) => {
 
-    const [posts, setPosts] = useState([])
     const [postsVisible, setPostsVisible] = useState(false)
-
-    async function togglePosts() {
-        const posts = await fetchPosts()
-        setPosts(posts)
-        setPostsVisible(!postsVisible)
-    }
 
     return (
         <div>
@@ -28,7 +20,7 @@ const Posts = () => {
 
                 <div className="flex flex-col items-center justify-content text-center">
                     <h1 className="text-4xl">Posts</h1>
-                    <button onClick={togglePosts} className="border-1 bg-brand px-8 py-4 w-48 text-white rounded shadow-2xl hover:shadow transition-all my-8">
+                    <button onClick={() => setPostsVisible(!postsVisible)}>
                         {!postsVisible ? `Show posts` : `Hide posts`}
                     </button>
 
@@ -52,6 +44,21 @@ const Posts = () => {
             </main>
         </div>
     )
+}
+
+
+// This function gets called at build time on server-side.
+// It may be called again, on a serverless function, if
+// revalidation is enabled and a new request comes in
+export async function getStaticProps(ctx) {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts/')
+    const posts = await response.json()
+
+    return {
+        props: {
+            posts,
+        }
+    }
 }
 
 export default Posts
