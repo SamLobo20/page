@@ -10,6 +10,7 @@ const Nav = () => {
         { name: "Contact", url: "/contact" },
         { name: "Video", url: "/video" },
         { name: "Wiki", url: "/wiki" },
+        { name: "Map", url: "/map" },
     ]
 
     return (
