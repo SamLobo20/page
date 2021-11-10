@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import Nav from "../components/Nav"
 // import { addDataLayer } from "../map/addDataLayer"
 import { initializeMap } from "../lib/map/initializeMap"
-import 'mapbox-gl/dist/mapbox-gl.css';
+import 'mapbox-gl/dist/mapbox-gl.css'
 
 const mapboxgl = require("mapbox-gl/dist/mapbox-gl.js")
 
