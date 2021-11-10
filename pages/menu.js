@@ -27,7 +27,7 @@ const Menu = () => {
 
       <main className="w-screen pb-32">
         <div className="flex flex-col items-center justify-content text-center">
-          sdcsjthis.cdsbcsd = this.cdsbcsd.bind(this)
+          <h1>Menu</h1>
         </div>
       </main>
     </div>
