@@ -25,7 +25,7 @@ export default function Home() {
               <code className="p-3 font-mono bg-gray-100 rounded-md">My Github</code>
             </a>
           </Link>
-          <Image src="/cat.png" alt="Cat" width={200} height={200} />
+          <Image src="/cat.png" alt="Cat" width={200} height={200} priority={true} />
         </div>
       </main>
 
