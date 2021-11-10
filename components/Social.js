@@ -13,7 +13,7 @@ const Social = () => {
           </Link>
         </li>
         <li>
-          <Link href="https://instagram.com/SamLobo72">
+          <Link href="https://instagram.com/sam_kota72">
             <a target="_blank" rel="noopener noreferrer nofollow">
               <Image src="/social/instagram.png" width={40} height={40} alt="Instagram"></Image>
             </a>
