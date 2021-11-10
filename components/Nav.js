@@ -14,7 +14,7 @@ const Nav = () => {
     ]
 
     return (
-        <ul className="flex justify-between my-4 ml-4 mb-12 w-max space-x-8">
+        <ul className="flex justify-between my-4 ml-4 w-max space-x-8">
             {links.map((l) => {
                 return (
                     <li key={l.name}>
