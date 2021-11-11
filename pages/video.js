@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { useState } from 'react'
 import Nav from '../components/Nav.js'
 
 const Video = () => {
