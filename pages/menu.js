@@ -1,6 +1,22 @@
+import { useEffect, useState } from 'react'
 import Head from 'next/head'
+import Image from 'next/image'
+import MenuEnglish from '../components/MenuEnglish'
+import MenuSpanish from '../components/MenuSpanish'
 
 const Menu = () => {
+
+  const [language, setLanguage] = useState("en")
+
+  const spanish = ["es", "es-AR", "es-GT", "es-CR", "es-PA", "es-DO", "es-MX", "es-VE", "es-CO",
+    "es-PE", "es-EC", "es-CL", "es-UY", "es-PY", "es-BO", "es-SV", "es-HN", "es-NI",
+    "es-PR"]
+
+  useEffect(() => {
+    if (spanish.includes(window.navigator.language)) {
+      setLanguage("es")
+    }
+  }, [])
 
   return (
     <div>
@@ -27,7 +43,18 @@ const Menu = () => {
 
       <main className="w-screen pb-32">
         <div className="flex flex-col items-center justify-content text-center">
-          <h1>Menu</h1>
+
+          <Image src="/sucre/header.png" width={960} height={540} alt="Header" />
+
+
+          {language === "en" &&
+            <MenuEnglish />
+          }
+
+          {language === "es" &&
+            <MenuSpanish />
+          }
+
         </div>
       </main>
     </div>
